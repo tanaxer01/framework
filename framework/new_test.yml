@@ -1,0 +1,22 @@
+title: 1
+description: asdf
+questions: 
+    - reps: 2
+      txt: "txts/control1-2021-1.txt"
+      pattern:
+        proto: "DNS"
+        total: 5
+        period: 2
+        server: "8.8.8.8"
+        query: "www.google.cl"
+        mods: [{field: "ttl", prob: 0.8, value: 10},
+               {field: "id",  prob: 0.2, value:  4} ]
+    - reps: 1
+      txt: "txts/control1-2021-1.txt"
+      pattern:
+        proto: "DNS"
+        total: [2,5]
+        period: [2,5]
+        server: "8.8.8.8"
+        query: "www.google.cl"
+        mods: [{field: "ttl", prob: 0.8, value: 60}]
