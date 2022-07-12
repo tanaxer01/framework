@@ -34,7 +34,7 @@ class Question:
         del self.patterns[num]
 
     def ls_patterns(self):
-        print("preguntas:")
+        print("patrones:")
         for i,j in enumerate(self.patterns):
             print(f"[{i}] {j}")
 
